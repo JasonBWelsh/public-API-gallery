@@ -1,0 +1,21 @@
+
+//Uitlities 
+@import 'utilities/functions',
+	    'utilities/helpers',
+        'utilities/mixins',
+        'utilities/variables';
+
+// Base Styles
+@import 'base/normalize',
+        'base/base';
+
+//Layout
+@import 'layout/containers',
+        'layout/header',
+        'layout/main',
+        'layout/nav';
+
+//Components
+@import 'components/buttons',
+        'components/icons',
+        'components/images';
