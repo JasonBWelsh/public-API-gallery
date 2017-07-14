@@ -1,0 +1,18 @@
+.main-header,
+.mobile-select {
+	@include flexbox();
+}
+
+.main-header {
+	@include flex-direction(#{column});
+	@include pad(1em);
+	text-align: center;
+	background: $dark;
+	border-bottom: 1px solid $black;
+}
+
+.mobile-select {
+	@include justify-content(#{space-around});
+	@include margin(1.4em 0 0);
+	/* margin-bottom: 0; */
+}

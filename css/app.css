@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400");
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -388,5 +389,59 @@ template {
  */
 [hidden] {
   display: none; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body {
+  background: #360033;
+  background: linear-gradient(to right, #360033, #096b75);
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid #000;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: lighter;
+  line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0; }
+
+h1 {
+  font-size: 1.2rem; }
+
+ul, ol {
+  list-style: none;
+  padding-left: 0; }
+
+.main-header,
+.mobile-select {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.main-header {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1em;
+  text-align: center;
+  background: #323232;
+  border-bottom: 1px solid #000; }
+
+.mobile-select {
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: space-around;
+  margin: 1.4em 0 0;
+  /* margin-bottom: 0; */ }
 
 /*# sourceMappingURL=app.css.map */

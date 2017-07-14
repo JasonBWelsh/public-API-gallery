@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background: $dark-purple;
+	background: linear-gradient(to right, $dark-purple, $aqua-green);
+	height: 100vh;
+	width: 100vw;
+	border: 1px solid $black;
+	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{lighter}, $lh: 1.5);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.2rem;
+}
+
+ul, ol {
+	list-style: none;
+	padding-left: 0;
+}
