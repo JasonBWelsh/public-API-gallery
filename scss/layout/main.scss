@@ -1,0 +1,42 @@
+
+.gallery-section,
+.gallery-list,
+.gallery-list li {
+	@include flexbox();
+	@include flex-direction(#{column});
+	@include justify-content(#{center});
+	@include align-items(#{center});
+}
+
+
+.gallery-section {
+	@include pad(1em);
+}
+
+.gallery-list {
+	@include justify-content(#{center});
+	@include pad(1em);
+	li {
+		@include margin(0 0 1em);
+	}
+	img {
+		border: 2px solid $white;
+		width: 16em;
+		height: 24em;
+		border-radius: 10em 10em 0 0;
+		overflow: auto;
+	}
+	span {
+		/* @include align-self(#{flex-start}); */
+		@include pad(.5em);
+		background: $white;
+		color: $black;
+	}
+}
+
+.info {
+	@include margin(3em 1em 1em);
+	@include pad(1em);
+	background: $black;
+	display: inline-block;
+}

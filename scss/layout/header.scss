@@ -8,22 +8,31 @@
 	@include pad(1em);
 	text-align: center;
 	background: $dark;
-	border-bottom: 1px solid $black;
+	background: #070000;  /* fallback for old browsers */
+	background: linear-gradient(to right, #070000, #4C0001, #070000); 
+	border-bottom: 1px solid $white;
+	@media ($break-m) {
+		background: yellow;
+	}
 }
 
 .mobile-select {
 	@include justify-content(#{space-around});
 	@include margin(1.4em 0 0);
 	li {
-		@include pad(.5em 1em);
+		@include pad(.3em .7em);
 		@include transition(all .4s ease);
 		&:hover {
-			background: $dark-purple;
+			/* background: $dark-crimson; */
+			background: $white;
+			color: $dark-crimson;
 		}
 	}
 }
 
 .selected { // for API filtering
 	@include border-radius(5em);
-	background: $dark-purple;
+	background: $white;
+	color: $dark-crimson;
+	/* background: $dark-crimson; */
 }
