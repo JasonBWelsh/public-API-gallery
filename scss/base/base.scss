@@ -6,11 +6,26 @@
 
 body {
 	background: $dark-purple;
-	background: linear-gradient(to right, $dark-purple, $aqua-green);
+	/* background: linear-gradient(to right, $dark-purple, $aqua-green); */
 	height: 100vh;
 	width: 100vw;
 	border: 1px solid $black;
 	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{lighter}, $lh: 1.5);
+	/* @include transition(background-color .4s ease); */
+	animation: bg-animation 30s infinite;
+}
+
+// Body BG Animation Keyframes
+@keyframes bg-animation {
+ 0% {
+    background-color: $dark-purple;
+  }
+  50% {
+    background-color: $aqua-green;
+  }
+  100% {
+    background-color: $dark-purple;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

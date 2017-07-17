@@ -14,5 +14,16 @@
 .mobile-select {
 	@include justify-content(#{space-around});
 	@include margin(1.4em 0 0);
-	/* margin-bottom: 0; */
+	li {
+		@include pad(.5em 1em);
+		@include transition(all .4s ease);
+		&:hover {
+			background: $dark-purple;
+		}
+	}
+}
+
+.selected { // for API filtering
+	@include border-radius(5em);
+	background: $dark-purple;
 }

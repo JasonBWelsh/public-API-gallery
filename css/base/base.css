@@ -8,7 +8,7 @@ Error: Undefined variable: "$dark-purple".
 6: 
 7: body {
 8: 	background: $dark-purple;
-9: 	background: linear-gradient(to right, $dark-purple, $aqua-green);
+9: 	/* background: linear-gradient(to right, $dark-purple, $aqua-green); *\/
 10: 	height: 100vh;
 11: 	width: 100vw;
 12: 	border: 1px solid $black;
@@ -65,4 +65,4 @@ scss/base/base.scss:8
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$dark-purple\".\A         on line 8 of scss/base/base.scss\A \A 3: *::after {\A 4: 	box-sizing: border-box;\A 5: }\A 6: \A 7: body {\A 8: 	background: $dark-purple;\A 9: 	background: linear-gradient(to right, $dark-purple, $aqua-green);\A 10: 	height: 100vh;\A 11: 	width: 100vw;\A 12: 	border: 1px solid $black;\A 13: 	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{lighter}, $lh: 1.5);"; }
+  content: "Error: Undefined variable: \"$dark-purple\".\A         on line 8 of scss/base/base.scss\A \A 3: *::after {\A 4: 	box-sizing: border-box;\A 5: }\A 6: \A 7: body {\A 8: 	background: $dark-purple;\A 9: 	/* background: linear-gradient(to right, $dark-purple, $aqua-green); */\A 10: 	height: 100vh;\A 11: 	width: 100vw;\A 12: 	border: 1px solid $black;\A 13: 	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{lighter}, $lh: 1.5);"; }
