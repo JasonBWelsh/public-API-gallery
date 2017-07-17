@@ -1,5 +1,7 @@
 const mobileSelect = document.querySelector('.mobile-select');
 let numbers = []; // holds random nums for card indexes 
+const gallerySection = document.querySelector('.gallery-section');
+const galleryList = gallerySection.querySelector('.gallery-list');
 
 // Generate list of random numbers between 1-100 to use as array indexes
 function getRandomNumbers(x) {
@@ -10,6 +12,21 @@ function getRandomNumbers(x) {
 	}
 	console.log(numbers);
 	return numbers;
+}
+
+// Build HTML for gallery 
+function buildGallery(cards, numbers) {
+	galleryList.innerHTML = "";
+	for (let i = 0; i < numbers.length; i += 1) {
+		let li = document.createElement("li");
+		let img = document.createElement("img");
+		let curNum = numbers[i];
+		let imgSrc = cards[curNum].imageUrl;
+		img.setAttribute("src", imgSrc);
+		img.setAttribute("alt", "Randomly generated card");
+		li.appendChild(img);
+		galleryList.appendChild(li);
+	}
 }
 
 mobileSelect.addEventListener('click', (e) => {
@@ -47,12 +64,10 @@ mobileSelect.addEventListener('click', (e) => {
 				let curNum = numbers[i];
 				cardList.push(cards[curNum]);
 			}
-			output.innerHTML = cardList[0].name; 
-			console.log(cardList);
-			// testing setting card img
-			const image = document.querySelector('.photo');
-			const imgSrc = cardList[0].imageUrl;
-			image.setAttribute("src", imgSrc);
+
+			// Testing gallery build function
+			buildGallery(cards, numbers);
+
 		}
 		console.log(magicAPI);
 		$.getJSON(magicAPI, displayCards);
