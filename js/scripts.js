@@ -51,6 +51,7 @@ mobileSelect.addEventListener('click', (e) => {
 		const magicBlack = "?colors=black";
 		const magicWhite = "?colors=white";
 		const magicBlue = "?colors=blue";
+		const magicGreen = "?colors=green";
 		// check button color and filter server response for matching color set
 		if (color === 'red') {
 			magicAPI += magicRed;
@@ -60,6 +61,8 @@ mobileSelect.addEventListener('click', (e) => {
 			magicAPI += magicWhite;
 		} else if (color === 'blue') {
 			magicAPI += magicBlue;
+		} else if (color === 'green') {
+			magicAPI += magicGreen;
 		}
 		function displayCards(data) {
 			const output = document.querySelector('.output');

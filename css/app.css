@@ -397,7 +397,6 @@ template {
 
 body {
   background: #140000;
-  /* background: linear-gradient(to right, $dark-purple, $aqua-green); */
   height: 100%;
   width: 100vw;
   font-family: "Montserrat", sans-serif;
@@ -519,7 +518,7 @@ ul, ol {
     border: 2px solid #fff;
     width: 16em;
     height: 24em;
-    border-radius: 10em 10em 0 0;
+    border-radius: 1em;
     overflow: auto; }
   .gallery-list span {
     /* @include align-self(flex-start); */
