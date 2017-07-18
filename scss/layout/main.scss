@@ -26,7 +26,7 @@
 		}
 	}
 	img {
-		border: 2px solid $white;
+		border: 1px solid $dark;
 		width: 16em;
 		height: 24em;
 		border-radius: 1em;
@@ -35,8 +35,8 @@
 	span {
 		/* @include align-self(#{flex-start}); */
 		@include pad(.5em);
-		background: $white;
-		color: $black;
+		/* background: $dark; */
+		color: $white;
 	}
 	@media (min-width: $break-m) {
 		@include flex-direction(#{row});
@@ -47,6 +47,10 @@
 .info {
 	@include margin(3em 1em 1em);
 	@include pad(1em);
-	background: $black;
+	background: $dark;
+	box-shadow: 1px 1px 5px 6px $dark;
 	display: inline-block;
+	@media (min-width: $break-m) {
+		@include margin(3em);
+	}
 }
