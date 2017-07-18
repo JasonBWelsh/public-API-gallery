@@ -453,6 +453,10 @@ ul, ol {
       background: yellow; } }
 
 .mobile-select {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-justify-content: space-around;
   -moz-justify-content: space-around;
   -ms-justify-content: space-around;
@@ -460,6 +464,7 @@ ul, ol {
   -ms-flex-pack: space-around;
   margin: 1.4em 0 0; }
   .mobile-select li {
+    flex: 1 33%;
     padding: 0.3em 0.7em;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
