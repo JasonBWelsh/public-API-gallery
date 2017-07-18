@@ -22,13 +22,18 @@
 	@include margin(2em 0 0);
 	@media (min-width: $break-m) {
 		transform: rotate(7deg);
-		width: 40%;
+		width: 50%;
+	}
+	@media (min-width: $break-l) {
+		width: 35%;
 	}
 	li {
 		flex: 1 33%;
 		@include pad(.3em .7em);
 		@include transition(all .4s ease);
 		@media (min-width: $break-m) {
+			@include margin(.2em);
+			flex: 1 27%;
 			border: 1px solid $white;
 		}
 		&:hover {

@@ -477,7 +477,10 @@ ul, ol {
   @media (min-width: 768px) {
     .mobile-select {
       transform: rotate(7deg);
-      width: 40%; } }
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .mobile-select {
+      width: 35%; } }
   .mobile-select li {
     flex: 1 33%;
     padding: 0.3em 0.7em;
@@ -488,6 +491,8 @@ ul, ol {
     transition: all 0.4s ease; }
     @media (min-width: 768px) {
       .mobile-select li {
+        margin: 0.2em;
+        flex: 1 27%;
         border: 1px solid #fff; } }
     .mobile-select li:hover {
       /* background: $dark; */
