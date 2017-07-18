@@ -1,4 +1,4 @@
-
+.main,
 .gallery-section,
 .gallery-list,
 .gallery-list li {
@@ -8,9 +8,9 @@
 	@include align-items(#{center});
 }
 
-
 .gallery-section {
 	@include pad(1em);
+	max-width: $max-width;
 }
 
 .gallery-list {
@@ -50,8 +50,129 @@
 	@include pad(1em);
 	background: $dark;
 	box-shadow: 1px 1px 5px 6px $dark;
-	display: inline-block;
+	/* display: inline-block; */
 	@media (min-width: $break-m) {
-		@include margin(3em);
+		@include margin(2em 0 0);
+	}
+	// opening effect
+	@include transition(all .5s ease);
+	transform: translateY(10em);
+}
+
+.reveal {
+	transform: translateX(1em);
+	@media (min-width: $break-m) {
+		/* transform: translateX(1em); */
+	}
+	@media (min-width: $break-l) {
+		/* transform: translateX(2em); */
 	}
 }
+
+// cardBox
+
+.cardBox {
+	@include pad(1em);
+	position: relative; // for icons
+	position: fixed;
+	top: 25%;
+	height: 500px;
+	width: 95%;
+	z-index: 100;
+	background: $dark;
+	opacity: 0;
+	transform: translateY(50em);
+	box-shadow: 1px 1px 5px 6px $dark;
+	@include transition(transform .9s ease);
+	/* @include transition(opacity .5s ease); */
+	@media (min-width: $break-m) {
+		width: 60%;
+	}
+	@media (min-width: $break-l) {
+		width: 40%;
+	}
+	// animation bg
+	animation: bg-animation 20s infinite;
+	&:hover .cardBox-closeBtn,
+	&:hover .cardBox-leftArw,
+	&:hover .cardBox-rightArw {
+		height: 3em;
+		width: 3em;
+	}
+}
+
+.cardBox-closeBtn,
+.cardBox-leftArw,
+.cardBox-rightArw {
+	height: 2em;
+	width: 2em;
+	position: absolute;
+	@include transition(all .3s ease);
+}
+
+.cardBox-closeBtn {
+	top: .5em;
+	right: .5em;
+	height: 2em;
+	width: 2em;
+	background: url(../img/close.svg);
+	background-size: cover;
+	@include transition(all .3s ease);
+	&:hover {
+		transform: rotate(90deg);
+	}
+}
+
+.cardBox-leftArw,
+.cardBox-rightArw {
+	background: url(../img/arrow.svg);
+	background-size: cover;
+}
+
+.cardBox-leftArw {
+	top: 50%;
+	left: 0;
+	transform: rotate(45deg);
+	@media (min-width: $break-m) {
+		left: -1.5em;
+	}
+	&:hover {
+		transform: rotate(-140deg);
+	}
+}
+
+.cardBox-rightArw {
+	top: 50%;
+	right: 0;
+	transform: rotate(-135deg);
+	@media (min-width: $break-m) {
+		right: -1.5em;
+	}
+	&:hover {
+		transform: rotate(45deg);
+	}
+}
+
+.cardBoxReveal {
+	opacity: .95;
+	transform: translateY(0);
+}
+
+// .cardBox BG Animation Keyframes
+ @keyframes bg-animation {
+ 0% {
+    background-color: $clear-blue;
+  }
+  25% {
+  	background-color: $clear-green;
+  }
+  50% {
+    background-color: $clear-blue;
+  }
+  75% {
+  	background-color: $clear-green;
+  }
+  100% {
+    background-color: $clear-blue;
+  }
+} 

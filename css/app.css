@@ -506,6 +506,7 @@ ul, ol {
   opacity: .9;
   transform: scale(1.2) rotate(-7deg); }
 
+.main,
 .gallery-section,
 .gallery-list,
 .gallery-list li {
@@ -529,7 +530,8 @@ ul, ol {
   align-items: center; }
 
 .gallery-section {
-  padding: 1em; }
+  padding: 1em;
+  max-width: 1200px; }
 
 .gallery-list {
   -webkit-justify-content: center;
@@ -574,9 +576,121 @@ ul, ol {
   padding: 1em;
   background: #323232;
   box-shadow: 1px 1px 5px 6px #323232;
-  display: inline-block; }
+  /* display: inline-block; */
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  transform: translateY(10em); }
   @media (min-width: 768px) {
     .info {
-      margin: 3em; } }
+      margin: 2em 0 0; } }
+
+.reveal {
+  transform: translateX(1em); }
+  @media (min-width: 768px) {
+    .reveal {
+      /* transform: translateX(1em); */ } }
+  @media (min-width: 992px) {
+    .reveal {
+      /* transform: translateX(2em); */ } }
+
+.cardBox {
+  padding: 1em;
+  position: relative;
+  position: fixed;
+  top: 25%;
+  height: 500px;
+  width: 95%;
+  z-index: 100;
+  background: #323232;
+  opacity: 0;
+  transform: translateY(50em);
+  box-shadow: 1px 1px 5px 6px #323232;
+  -webkit-transition: transform 0.9s ease;
+  -moz-transition: transform 0.9s ease;
+  -ms-transition: transform 0.9s ease;
+  -o-transition: transform 0.9s ease;
+  transition: transform 0.9s ease;
+  /* @include transition(opacity .5s ease); */
+  animation: bg-animation 20s infinite; }
+  @media (min-width: 768px) {
+    .cardBox {
+      width: 60%; } }
+  @media (min-width: 992px) {
+    .cardBox {
+      width: 40%; } }
+  .cardBox:hover .cardBox-closeBtn, .cardBox:hover .cardBox-leftArw, .cardBox:hover .cardBox-rightArw {
+    height: 3em;
+    width: 3em; }
+
+.cardBox-closeBtn,
+.cardBox-leftArw,
+.cardBox-rightArw {
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.cardBox-closeBtn {
+  top: .5em;
+  right: .5em;
+  height: 2em;
+  width: 2em;
+  background: url(../img/close.svg);
+  background-size: cover;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .cardBox-closeBtn:hover {
+    transform: rotate(90deg); }
+
+.cardBox-leftArw,
+.cardBox-rightArw {
+  background: url(../img/arrow.svg);
+  background-size: cover; }
+
+.cardBox-leftArw {
+  top: 50%;
+  left: 0;
+  transform: rotate(45deg); }
+  @media (min-width: 768px) {
+    .cardBox-leftArw {
+      left: -1.5em; } }
+  .cardBox-leftArw:hover {
+    transform: rotate(-140deg); }
+
+.cardBox-rightArw {
+  top: 50%;
+  right: 0;
+  transform: rotate(-135deg); }
+  @media (min-width: 768px) {
+    .cardBox-rightArw {
+      right: -1.5em; } }
+  .cardBox-rightArw:hover {
+    transform: rotate(45deg); }
+
+.cardBoxReveal {
+  opacity: .95;
+  transform: translateY(0); }
+
+@keyframes bg-animation {
+  0% {
+    background-color: #155799; }
+  25% {
+    background-color: #159957; }
+  50% {
+    background-color: #155799; }
+  75% {
+    background-color: #159957; }
+  100% {
+    background-color: #155799; } }
 
 /*# sourceMappingURL=app.css.map */

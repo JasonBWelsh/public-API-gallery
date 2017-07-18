@@ -3,7 +3,7 @@ Error: Undefined mixin 'flexbox'.
         on line 5 of scss/layout/main.scss, in `flexbox'
         from line 5 of scss/layout/main.scss
 
-1: 
+1: .main,
 2: .gallery-section,
 3: .gallery-list,
 4: .gallery-list li {
@@ -68,4 +68,4 @@ scss/layout/main.scss:5
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flexbox'.\A         on line 5 of scss/layout/main.scss, in `flexbox'\A         from line 5 of scss/layout/main.scss\A \A 1: \A 2: .gallery-section,\A 3: .gallery-list,\A 4: .gallery-list li {\A 5: 	@include flexbox();\A 6: 	@include flex-direction(#{column});\A 7: 	@include justify-content(#{center});\A 8: 	@include align-items(#{center});\A 9: }\A 10: "; }
+  content: "Error: Undefined mixin 'flexbox'.\A         on line 5 of scss/layout/main.scss, in `flexbox'\A         from line 5 of scss/layout/main.scss\A \A 1: .main,\A 2: .gallery-section,\A 3: .gallery-list,\A 4: .gallery-list li {\A 5: 	@include flexbox();\A 6: 	@include flex-direction(#{column});\A 7: 	@include justify-content(#{center});\A 8: 	@include align-items(#{center});\A 9: }\A 10: "; }

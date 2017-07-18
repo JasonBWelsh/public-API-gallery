@@ -1,8 +1,10 @@
+const body = document.querySelector('body');
 const mobileSelect = document.querySelector('.mobile-select');
 let numbers = []; // holds random nums for card indexes 
 const gallerySection = document.querySelector('.gallery-section');
 const galleryList = gallerySection.querySelector('.gallery-list');
 const infoDiv = document.querySelector('.info');
+const cardBox = document.querySelector('.cardBox');
 
 // Generate list of random numbers between 1-100 to use as array indexes
 function getRandomNumbers(x) {
@@ -17,7 +19,7 @@ function getRandomNumbers(x) {
 
 // Build HTML for gallery 
 function buildGallery(cards, numbers) {
-	galleryList.innerHTML = "";
+	galleryList.innerHTML = ""; // clears page for new cards
 	for (let i = 0; i < numbers.length; i += 1) {
 		let li = document.createElement("li");
 		let img = document.createElement("img");
@@ -25,6 +27,7 @@ function buildGallery(cards, numbers) {
 		let imgSrc = cards[curNum].imageUrl;
 		img.setAttribute("src", imgSrc);
 		img.setAttribute("alt", "Randomly generated card");
+		img.setAttribute("data-index", curNum);
 		let span = document.createElement("span");
 		span.textContent = cards[curNum].name;
 		li.appendChild(img);
@@ -64,23 +67,43 @@ mobileSelect.addEventListener('click', (e) => {
 		} else if (color === 'green') {
 			magicAPI += magicGreen;
 		}
-		function displayCards(data) {
+		function displayCards(data) {  // server callback function
 			const output = document.querySelector('.output');
 			const cards = data.cards; // Stores server response (array of card objects)
-			const cardList = []; // holds individial cards
-			// loop over random numbers array and use each number for index
-			// number for cardList
 			getRandomNumbers(12); // get specified number of random numbers
-			for (let i = 0; i < numbers.length; i += 1) {
-				let curNum = numbers[i];
-				cardList.push(cards[curNum]);
-			}
-
-			// Testing gallery build function
+			// Build card gallery
 			buildGallery(cards, numbers);
+
+			buildLightbox();
 
 		}
 		console.log(magicAPI);
 		$.getJSON(magicAPI, displayCards);
 	}
 });
+
+// Lightbox fucntionality
+// use data-index value of images to populate array of objects
+
+galleryList.addEventListener('click', (e) => {
+	let target = e.target;
+	if (target.tagName === 'IMG') {
+		cardBox.classList.add('cardBoxReveal');
+	}
+});
+
+
+
+
+function buildLightbox () {
+	let displayedCards = galleryList.querySelectorAll('img');
+	console.log(displayedCards); // remove this *test*
+}
+
+
+// Info Div effect
+
+$(document).ready(function() {
+	infoDiv.classList.add('reveal');
+});
+
