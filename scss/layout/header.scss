@@ -7,34 +7,40 @@
 	@include flex-direction(#{column});
 	@include pad(1em);
 	text-align: center;
-	background: $dark;
-	background: #070000;  /* fallback for old browsers */
-	background: linear-gradient(to right, #070000, #4C0001, #070000); 
-	border-bottom: 1px solid $white;
-	@media ($break-m) {
-		background: yellow;
+	/* background: $dark; */
+	/* background: #070000;  */ /* fallback for old browsers */
+	/* background: linear-gradient(to right, #070000, #4C0001, #070000);  */
+	/* border-bottom: 1px solid $white; */
+	@media (min-width: $break-m) {
+		@include align-items(#{center});
 	}
 }
 
 .mobile-select {
 	@include flex-wrap(#{wrap});
 	@include justify-content(#{space-around});
-	@include margin(1.4em 0 0);
+	@include margin(2em 0 0);
+	@media (min-width: $break-m) {
+		transform: rotate(7deg);
+		width: 40%;
+	}
 	li {
 		flex: 1 33%;
 		@include pad(.3em .7em);
 		@include transition(all .4s ease);
+		@media (min-width: $break-m) {
+			border: 1px solid $white;
+		}
 		&:hover {
-			/* background: $dark-crimson; */
-			background: $white;
-			color: $dark-crimson;
+			/* background: $dark; */
+			/* color: $black; */
+			transform: translateX(10px) rotate(-7deg);
 		}
 	}
 }
 
 .selected { // for API filtering
-	@include border-radius(5em);
-	background: $white;
-	color: $dark-crimson;
-	/* background: $dark-crimson; */
+	background: $dark;
+	/* color: $black; */
+	transform: scale(1.3);
 }

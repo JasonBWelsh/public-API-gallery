@@ -17,7 +17,13 @@
 	@include justify-content(#{center});
 	@include pad(1em);
 	li {
-		@include margin(0 0 1em);
+		@include margin(0 0 3em);
+		@media (min-width: $break-m) {
+			flex: 1 50%;
+		}
+		@media (min-width: $break-l) {
+			flex-basis: 33%;
+		}
 	}
 	img {
 		border: 2px solid $white;
@@ -31,6 +37,10 @@
 		@include pad(.5em);
 		background: $white;
 		color: $black;
+	}
+	@media (min-width: $break-m) {
+		@include flex-direction(#{row});
+		@include flex-wrap(#{wrap});
 	}
 }
 
