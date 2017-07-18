@@ -5,6 +5,7 @@ const gallerySection = document.querySelector('.gallery-section');
 const galleryList = gallerySection.querySelector('.gallery-list');
 const infoDiv = document.querySelector('.info');
 const cardBox = document.querySelector('.cardBox');
+const cardBoxCloseBtn = cardBox.querySelector('.cardBox-closeBtn');
 
 // Generate list of random numbers between 1-100 to use as array indexes
 function getRandomNumbers(x) {
@@ -93,13 +94,15 @@ galleryList.addEventListener('click', (e) => {
 });
 
 
-
-
 function buildLightbox () {
 	let displayedCards = galleryList.querySelectorAll('img');
 	console.log(displayedCards); // remove this *test*
 }
 
+// close lightbox
+cardBoxCloseBtn.addEventListener('click', () => {
+	cardBox.classList.remove('cardBoxReveal');
+});
 
 // Info Div effect
 
