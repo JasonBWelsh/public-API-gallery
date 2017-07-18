@@ -553,10 +553,11 @@ ul, ol {
     border-radius: 1em;
     overflow: auto; }
   .gallery-list span {
-    /* @include align-self(flex-start); */
     padding: 0.5em;
-    /* background: $dark; */
-    color: #fff; }
+    color: #fff;
+    /* border-left: 1px solid $white;
+    border-bottom: 1px solid $white; */
+    box-shadow: -8px 8px 6px -6px #323232; }
   @media (min-width: 768px) {
     .gallery-list {
       -webkit-flex-direction: row;

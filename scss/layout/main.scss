@@ -33,10 +33,11 @@
 		overflow: auto;
 	}
 	span {
-		/* @include align-self(#{flex-start}); */
 		@include pad(.5em);
-		/* background: $dark; */
 		color: $white;
+		/* border-left: 1px solid $white;
+		border-bottom: 1px solid $white; */
+		box-shadow: -8px 8px 6px -6px $dark;
 	}
 	@media (min-width: $break-m) {
 		@include flex-direction(#{row});
