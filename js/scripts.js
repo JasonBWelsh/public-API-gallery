@@ -8,6 +8,7 @@ const infoDiv = document.querySelector('.info');
 const cardBox = document.querySelector('.cardBox');
 const cardBoxCloseBtn = cardBox.querySelector('.cardBox-closeBtn');
 const cardBoxRightArw = cardBox.querySelector('.cardBox-rightArw');
+const cardBoxLeftArw = cardBox.querySelector('.cardBox-leftArw');
 const cardBoxContainer = cardBox.querySelector('.cardBox-container');
 //
 
@@ -37,12 +38,23 @@ let pageCards = []; // current card objects on page
 function populateLightbox(cards) {
 	let counter = 0;
 	buildBoxHTML(pageCards[counter]);
+	// click right arrow
 	cardBoxRightArw.addEventListener('click', () => {
 		if (counter < 11) {
 			counter ++;
 		} else {
 			counter = 0;
 		}
+		buildBoxHTML(pageCards[counter]);
+	});
+	// click left arrow
+	cardBoxLeftArw.addEventListener('click', () => {
+		if (counter > 0) {
+			counter --;
+		} else if (counter === 0) {
+			counter = 11;
+		}
+		console.log(counter);
 		buildBoxHTML(pageCards[counter]);
 	});
 }

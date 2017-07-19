@@ -160,6 +160,12 @@
 
 .cardBox-container {
 	height: 100%;
+	@include flexbox();
+	@include flex-direction(#{column});
+	img {
+		/* height: 384px; */
+		width: 256px;
+	}
 }
 
 .cardBoxReveal {
