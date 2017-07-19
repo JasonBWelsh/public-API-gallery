@@ -57,7 +57,7 @@
 	box-shadow: 1px 1px 5px 6px $dark;
 	/* display: inline-block; */
 	@media (min-width: $break-m) {
-		@include margin(2em 0 0);
+		@include margin(4em 0 0);
 	}
 	// opening effect
 	@include transition(all .5s ease);
@@ -162,9 +162,15 @@
 	height: 100%;
 	@include flexbox();
 	@include flex-direction(#{column});
+	@include align-items(#{center});
 	img {
+		@include margin(1em 0);
 		/* height: 384px; */
 		width: 256px;
+		border-radius: 1em;
+	}
+	p {
+		margin-top: 0;
 	}
 }
 

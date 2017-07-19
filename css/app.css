@@ -593,7 +593,7 @@ ul, ol {
   transform: translateY(10em); }
   @media (min-width: 768px) {
     .info {
-      margin: 2em 0 0; } }
+      margin: 4em 0 0; } }
 
 .reveal {
   transform: translateX(1em); }
@@ -695,10 +695,18 @@ ul, ol {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
   .cardBox-container img {
+    margin: 1em 0;
     /* height: 384px; */
-    width: 256px; }
+    width: 256px;
+    border-radius: 1em; }
+  .cardBox-container p {
+    margin-top: 0; }
 
 .cardBoxReveal {
   opacity: .95;
