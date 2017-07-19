@@ -4,8 +4,12 @@ let numbers = []; // holds random nums for card indexes
 const gallerySection = document.querySelector('.gallery-section');
 const galleryList = gallerySection.querySelector('.gallery-list');
 const infoDiv = document.querySelector('.info');
+// Card Box 
 const cardBox = document.querySelector('.cardBox');
 const cardBoxCloseBtn = cardBox.querySelector('.cardBox-closeBtn');
+const cardBoxRightArw = cardBox.querySelector('.cardBox-rightArw');
+const cardBoxContainer = cardBox.querySelector('.cardBox-container');
+//
 
 // Generate list of random numbers between 1-100 to use as array indexes
 function getRandomNumbers(x) {
@@ -20,9 +24,27 @@ function getRandomNumbers(x) {
 
 // Build HTML for gallery 
 
+function buildBoxHTML(card) {
+	let cardImg = card.imageUrl;
+	let boxHTML = '<h2>' + card.name + '</h2>';
+	boxHTML += '<img src="' + cardImg + '" alt="">';
+	boxHTML += '<p>' + card.type + '</p>';
+	boxHTML += '<p>Rarity: ' + card.rarity + '</p>';
+	cardBoxContainer.innerHTML = boxHTML;
+}
+
 let pageCards = []; // current card objects on page
-function populateLightbox() {
-	
+function populateLightbox(cards) {
+	let counter = 0;
+	buildBoxHTML(pageCards[counter]);
+	cardBoxRightArw.addEventListener('click', () => {
+		if (counter < 11) {
+			counter ++;
+		} else {
+			counter = 0;
+		}
+		buildBoxHTML(pageCards[counter]);
+	});
 }
 
 function buildGallery(cards, numbers) {
@@ -88,7 +110,9 @@ mobileSelect.addEventListener('click', (e) => {
 			// Build card gallery
 			buildGallery(cards, numbers);
 
-			buildLightbox();
+			/*buildLightbox();*/
+			console.log(cards);
+			populateLightbox(cards);
 
 		}
 		console.log(magicAPI);

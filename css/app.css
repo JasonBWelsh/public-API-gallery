@@ -685,6 +685,9 @@ ul, ol {
   .cardBox-rightArw:hover {
     transform: rotate(45deg); }
 
+.cardBox-container {
+  height: 100%; }
+
 .cardBoxReveal {
   opacity: .95;
   transform: translateY(0); }
