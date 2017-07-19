@@ -31,6 +31,11 @@
 		height: 24em;
 		border-radius: 1em;
 		overflow: auto;
+		@include transition(all .4s ease);
+		&:hover {
+			transform: rotate(-5deg);
+			box-shadow: 1px 1px 1px 2px $dark;
+		}
 	}
 	span {
 		@include pad(.5em);

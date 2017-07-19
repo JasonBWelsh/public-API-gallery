@@ -553,7 +553,15 @@ ul, ol {
     width: 16em;
     height: 24em;
     border-radius: 1em;
-    overflow: auto; }
+    overflow: auto;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    .gallery-list img:hover {
+      transform: rotate(-5deg);
+      box-shadow: 1px 1px 1px 2px #323232; }
   .gallery-list span {
     padding: 0.5em;
     color: #fff;

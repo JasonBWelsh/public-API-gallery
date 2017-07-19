@@ -19,8 +19,16 @@ function getRandomNumbers(x) {
 }
 
 // Build HTML for gallery 
+
+let pageCards = []; // current card objects on page
+function populateLightbox() {
+	
+}
+
 function buildGallery(cards, numbers) {
 	galleryList.innerHTML = ""; // clears page for new cards
+	pageCards.length = 0; // clear card Obj array
+
 	for (let i = 0; i < numbers.length; i += 1) {
 		let li = document.createElement("li");
 		let img = document.createElement("img");
@@ -34,7 +42,12 @@ function buildGallery(cards, numbers) {
 		li.appendChild(img);
 		li.appendChild(span);
 		galleryList.appendChild(li);
+		
+		// store current page card objects in pageCards array
+		let cardObj = cards[curNum];
+		pageCards.push(cardObj);	
 	}
+	console.log('CArd objects? ' + pageCards);
 }
 
 mobileSelect.addEventListener('click', (e) => {
