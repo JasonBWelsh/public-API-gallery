@@ -608,7 +608,7 @@ ul, ol {
   padding: 1em;
   position: relative;
   position: fixed;
-  top: 25%;
+  top: 22%;
   height: 500px;
   width: 95%;
   z-index: 100;
@@ -625,7 +625,8 @@ ul, ol {
   animation: bg-animation 20s infinite; }
   @media (min-width: 768px) {
     .cardBox {
-      width: 60%; } }
+      width: 60%;
+      top: 25%; } }
   @media (min-width: 992px) {
     .cardBox {
       width: 40%; } }

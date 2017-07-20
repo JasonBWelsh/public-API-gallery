@@ -35,8 +35,10 @@ function buildBoxHTML(card) {
 }
 
 let pageCards = []; // current card objects on page
-function populateLightbox(cards) {
-	let counter = 0;
+let dataPosition; // data-position attribute of card clicked on page
+let counter = 0;
+function populateLightbox(cards, counter) {
+	
 	buildBoxHTML(pageCards[counter]);
 	// click right arrow
 	cardBoxRightArw.addEventListener('click', () => {
@@ -54,9 +56,22 @@ function populateLightbox(cards) {
 		} else if (counter === 0) {
 			counter = 11;
 		}
-		console.log(counter);
+		
 		buildBoxHTML(pageCards[counter]);
 	});
+	// Click image to set counter to data-position load lightbox
+	galleryList.addEventListener('click', (e) => {
+	let target = e.target;
+	if (target.tagName === 'IMG') {
+			dataPosition = target.getAttribute("data-position"); // sets number in data position variable 
+			counter = dataPosition;
+			alert(dataPosition);
+			alert(counter);
+			buildBoxHTML(pageCards[counter]);
+		}
+	});
+	console.log(counter);
+	buildBoxHTML(pageCards[counter]);
 }
 
 function buildGallery(cards, numbers) {
@@ -71,6 +86,7 @@ function buildGallery(cards, numbers) {
 		img.setAttribute("src", imgSrc);
 		img.setAttribute("alt", "Randomly generated card");
 		img.setAttribute("data-index", curNum);
+		img.setAttribute("data-position", i); // use this index to open lightbox at right place???
 		let span = document.createElement("span");
 		span.textContent = cards[curNum].name;
 		li.appendChild(img);
@@ -81,7 +97,6 @@ function buildGallery(cards, numbers) {
 		let cardObj = cards[curNum];
 		pageCards.push(cardObj);	
 	}
-	console.log('CArd objects? ' + pageCards);
 }
 
 mobileSelect.addEventListener('click', (e) => {
@@ -122,9 +137,9 @@ mobileSelect.addEventListener('click', (e) => {
 			// Build card gallery
 			buildGallery(cards, numbers);
 
-			/*buildLightbox();*/
+
 			console.log(cards);
-			populateLightbox(cards);
+			populateLightbox(cards, counter);
 
 		}
 		console.log(magicAPI);
@@ -133,20 +148,20 @@ mobileSelect.addEventListener('click', (e) => {
 });
 
 // Lightbox fucntionality
-// use data-index value of images to populate array of objects
 
 galleryList.addEventListener('click', (e) => {
 	let target = e.target;
 	if (target.tagName === 'IMG') {
 		cardBox.classList.add('cardBoxReveal');
+		dataPosition = target.getAttribute("data-position"); // sets number in data position variable 
+		/*counter = dataPosition;
+		alert(counter);*/
 	}
 });
 
 
-function buildLightbox () {
-	let displayedCards = galleryList.querySelectorAll('img');
-	console.log(displayedCards); // remove this *test*
-}
+
+
 
 // close lightbox
 cardBoxCloseBtn.addEventListener('click', () => {
