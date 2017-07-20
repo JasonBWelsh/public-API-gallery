@@ -53,25 +53,20 @@
 .info {
 	@include margin(3em 1em 1em);
 	@include pad(1em);
-	background: $dark;
-	box-shadow: 1px 1px 5px 6px $dark;
-	/* display: inline-block; */
+	/* background: $dark; */
+	/* box-shadow: 1px 1px 5px 6px $dark; */
+	opacity: 0;
 	@media (min-width: $break-m) {
-		@include margin(4em 0 0);
+		@include margin(5em 0 0);
+		max-width: 80%;
 	}
 	// opening effect
-	@include transition(all .5s ease);
-	transform: translateY(10em);
+	@include transition(all 2s ease);
+	transition-delay: 1s;
 }
 
 .reveal {
-	transform: translateX(1em);
-	@media (min-width: $break-m) {
-		/* transform: translateX(1em); */
-	}
-	@media (min-width: $break-l) {
-		/* transform: translateX(2em); */
-	}
+	opacity: 1;
 }
 
 // cardBox
@@ -80,8 +75,8 @@
 	@include pad(1em);
 	position: relative; // for icons
 	position: fixed;
-	top: 22%;
-	height: 500px;
+	top: 15%;
+	height: 550px;
 	width: 95%;
 	z-index: 100;
 	background: $dark;
@@ -92,7 +87,7 @@
 	/* @include transition(opacity .5s ease); */
 	@media (min-width: $break-m) {
 		width: 60%;
-		top: 25%;
+		top: 20%;
 	}
 	@media (min-width: $break-l) {
 		width: 40%;

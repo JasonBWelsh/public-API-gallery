@@ -1,4 +1,5 @@
 const body = document.querySelector('body');
+const header = document.querySelector('.main-header');
 const mobileSelect = document.querySelector('.mobile-select');
 let numbers = []; // holds random nums for card indexes 
 const gallerySection = document.querySelector('.gallery-section');
@@ -162,5 +163,6 @@ cardBoxCloseBtn.addEventListener('click', () => {
 
 $(document).ready(function() {
 	infoDiv.classList.add('reveal');
+	header.classList.add('reveal');
 });
 

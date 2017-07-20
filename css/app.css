@@ -451,17 +451,19 @@ ul, ol {
   flex-direction: column;
   padding: 1em;
   text-align: center;
-  /* background: $dark; */
-  /* background: #070000;  */
-  /* fallback for old browsers */
-  /* background: linear-gradient(to right, #070000, #4C0001, #070000);  */
-  /* border-bottom: 1px solid $white; */ }
+  opacity: 0;
+  -webkit-transition: opacity 2s ease;
+  -moz-transition: opacity 2s ease;
+  -ms-transition: opacity 2s ease;
+  -o-transition: opacity 2s ease;
+  transition: opacity 2s ease; }
   @media (min-width: 768px) {
     .main-header {
       -webkit-align-items: center;
       -moz-align-items: center;
       -ms-align-items: center;
-      align-items: center; } }
+      align-items: center;
+      padding: 2em 1em; } }
 
 .mobile-select {
   -webkit-flex-wrap: wrap;
@@ -477,7 +479,8 @@ ul, ol {
   @media (min-width: 768px) {
     .mobile-select {
       transform: rotate(7deg);
-      width: 50%; } }
+      width: 50%;
+      margin: 3em 0 0; } }
   @media (min-width: 992px) {
     .mobile-select {
       width: 35%; } }
@@ -582,34 +585,29 @@ ul, ol {
 .info {
   margin: 3em 1em 1em;
   padding: 1em;
-  background: #323232;
-  box-shadow: 1px 1px 5px 6px #323232;
-  /* display: inline-block; */
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  transform: translateY(10em); }
+  /* background: $dark; */
+  /* box-shadow: 1px 1px 5px 6px $dark; */
+  opacity: 0;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+  transition-delay: 1s; }
   @media (min-width: 768px) {
     .info {
-      margin: 4em 0 0; } }
+      margin: 5em 0 0;
+      max-width: 80%; } }
 
 .reveal {
-  transform: translateX(1em); }
-  @media (min-width: 768px) {
-    .reveal {
-      /* transform: translateX(1em); */ } }
-  @media (min-width: 992px) {
-    .reveal {
-      /* transform: translateX(2em); */ } }
+  opacity: 1; }
 
 .cardBox {
   padding: 1em;
   position: relative;
   position: fixed;
-  top: 22%;
-  height: 500px;
+  top: 15%;
+  height: 550px;
   width: 95%;
   z-index: 100;
   background: #323232;
@@ -626,7 +624,7 @@ ul, ol {
   @media (min-width: 768px) {
     .cardBox {
       width: 60%;
-      top: 25%; } }
+      top: 20%; } }
   @media (min-width: 992px) {
     .cardBox {
       width: 40%; } }

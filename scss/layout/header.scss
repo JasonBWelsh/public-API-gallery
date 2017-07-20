@@ -7,12 +7,11 @@
 	@include flex-direction(#{column});
 	@include pad(1em);
 	text-align: center;
-	/* background: $dark; */
-	/* background: #070000;  */ /* fallback for old browsers */
-	/* background: linear-gradient(to right, #070000, #4C0001, #070000);  */
-	/* border-bottom: 1px solid $white; */
+	opacity: 0; // for fade in on page load set in JS .reveal class add
+	@include transition(opacity 2s ease);
 	@media (min-width: $break-m) {
 		@include align-items(#{center});
+		@include pad(2em 1em);
 	}
 }
 
@@ -23,6 +22,7 @@
 	@media (min-width: $break-m) {
 		transform: rotate(7deg);
 		width: 50%;
+		@include margin(3em 0 0);
 	}
 	@media (min-width: $break-l) {
 		width: 35%;
