@@ -65,12 +65,9 @@ function populateLightbox(cards, counter) {
 	if (target.tagName === 'IMG') {
 			dataPosition = target.getAttribute("data-position"); // sets number in data position variable 
 			counter = dataPosition;
-			alert(dataPosition);
-			alert(counter);
 			buildBoxHTML(pageCards[counter]);
 		}
 	});
-	console.log(counter);
 	buildBoxHTML(pageCards[counter]);
 }
 
@@ -137,8 +134,6 @@ mobileSelect.addEventListener('click', (e) => {
 			// Build card gallery
 			buildGallery(cards, numbers);
 
-
-			console.log(cards);
 			populateLightbox(cards, counter);
 
 		}
@@ -154,13 +149,8 @@ galleryList.addEventListener('click', (e) => {
 	if (target.tagName === 'IMG') {
 		cardBox.classList.add('cardBoxReveal');
 		dataPosition = target.getAttribute("data-position"); // sets number in data position variable 
-		/*counter = dataPosition;
-		alert(counter);*/
 	}
 });
-
-
-
 
 
 // close lightbox
