@@ -54,7 +54,7 @@ function populateLightbox(cards, counter) {
 	cardBoxLeftArw.addEventListener('click', () => {
 		if (counter > 0) {
 			counter --;
-		} else if (counter === 0) {
+		} else if (counter <= 0) {
 			counter = 11;
 		}
 		

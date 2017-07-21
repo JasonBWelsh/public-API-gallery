@@ -75,7 +75,7 @@
 	@include pad(1em);
 	position: relative; // for icons
 	position: fixed;
-	top: 15%;
+	top: 10%;
 	height: 550px;
 	width: 95%;
 	z-index: 100;
@@ -87,7 +87,7 @@
 	/* @include transition(opacity .5s ease); */
 	@media (min-width: $break-m) {
 		width: 60%;
-		top: 20%;
+		top: 15%;
 	}
 	@media (min-width: $break-l) {
 		width: 40%;
