@@ -56,6 +56,11 @@
 	}
 }
 
+.box-position-click { // for when clicked reposition on page
+	position: fixed;
+	bottom: 1em;
+}
+
 .box-1 {
 	animation: box1-animation 10s infinite;
 }

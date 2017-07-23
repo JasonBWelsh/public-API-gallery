@@ -2,8 +2,15 @@
 .main-header,
 .mobile-select,
 .main,
-.main-poke {
-	display: none;
+.main-poke{
+	/* display: none; */
+	transition: height .5s, width .5s, opacity .5s ease; // for select transition in
+}
+
+.hide {   // class to be removed in scripts.js for transiton into layout
+	opacity: 0;
+	height: .1em; 
+	width: .1em;
 }
 
 .main,
@@ -15,6 +22,7 @@
 	@include justify-content(#{center});
 	@include align-items(#{center});
 }
+
 
 .gallery-section {
 	@include pad(1em);
@@ -60,7 +68,10 @@
 	}
 }
 
-
 .reveal {
 	opacity: 1;
+}
+
+.wrapper-reveal { // for 
+
 }

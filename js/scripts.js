@@ -19,7 +19,8 @@ const cardBoxCloseBtn = cardBox.querySelector('.cardBox-closeBtn');
 const cardBoxRightArw = cardBox.querySelector('.cardBox-rightArw');
 const cardBoxLeftArw = cardBox.querySelector('.cardBox-leftArw');
 const cardBoxContainer = cardBox.querySelector('.cardBox-container');
-//
+//Poke Section
+const pokeWrap = document.querySelector('.main-poke');
 
 // landing page
 landingWrap.addEventListener('click', (e) => {
@@ -27,11 +28,17 @@ landingWrap.addEventListener('click', (e) => {
 	if (target.classList.contains('gallery-select-btn')) {// remove landing overlay and show header
 		landingWrap.style.display = 'none';
 		header.style.display = 'flex';
+		header.classList.add('headerReveal');
+		header.classList.remove('hide');
+		gallerySelectBtn.classList.add('btn-position-click');
 		if (target.classList.contains('mtg-gallery-btn')) { // show mobileSelect and MtG
 			mobileSelect.style.display = 'flex';
+			mobileSelect.classList.remove('hide');
 		}
 		if (target.classList.contains('poke-gallery-btn')) {
 			name.textContent = "PokeAPI Gallery (Under Construction)"
+			pokeWrap.style.display = 'flex';
+			pokeWrap.classList.remove('hide');
 		}
 	}
 });
@@ -187,7 +194,6 @@ cardBoxCloseBtn.addEventListener('click', () => {
 
 $(document).ready(function() {
 	infoDiv.classList.add('reveal');
-	header.classList.add('reveal');
 });
 
 

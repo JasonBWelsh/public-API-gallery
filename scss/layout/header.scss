@@ -7,7 +7,6 @@
 	@include flex-direction(#{column});
 	@include pad(1em);
 	text-align: center;
-	opacity: 0; // for fade in on page load set in JS .reveal class add
 	@include transition(opacity 2s ease);
 	@media (min-width: $break-m) {
 		@include align-items(#{center});
@@ -51,3 +50,4 @@
 	opacity: .9;
 	transform: scale(1.2) rotate(-7deg);
 }
+

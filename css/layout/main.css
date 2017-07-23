@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'flexbox'.
-        on line 13 of scss/layout/main.scss, in `flexbox'
-        from line 13 of scss/layout/main.scss
+        on line 20 of scss/layout/main.scss, in `flexbox'
+        from line 20 of scss/layout/main.scss
 
-8: 
-9: .main,
-10: .gallery-section,
-11: .gallery-list,
-12: .gallery-list li {
-13: 	@include flexbox();
-14: 	@include flex-direction(#{column});
-15: 	@include justify-content(#{center});
-16: 	@include align-items(#{center});
-17: }
-18: 
+15: 
+16: .main,
+17: .gallery-section,
+18: .gallery-list,
+19: .gallery-list li {
+20: 	@include flexbox();
+21: 	@include flex-direction(#{column});
+22: 	@include justify-content(#{center});
+23: 	@include align-items(#{center});
+24: }
+25: 
 
 Backtrace:
-scss/layout/main.scss:13:in `flexbox'
-scss/layout/main.scss:13
+scss/layout/main.scss:20:in `flexbox'
+scss/layout/main.scss:20
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
@@ -69,4 +69,4 @@ scss/layout/main.scss:13
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flexbox'.\A         on line 13 of scss/layout/main.scss, in `flexbox'\A         from line 13 of scss/layout/main.scss\A \A 8: \A 9: .main,\A 10: .gallery-section,\A 11: .gallery-list,\A 12: .gallery-list li {\A 13: 	@include flexbox();\A 14: 	@include flex-direction(#{column});\A 15: 	@include justify-content(#{center});\A 16: 	@include align-items(#{center});\A 17: }\A 18: "; }
+  content: "Error: Undefined mixin 'flexbox'.\A         on line 20 of scss/layout/main.scss, in `flexbox'\A         from line 20 of scss/layout/main.scss\A \A 15: \A 16: .main,\A 17: .gallery-section,\A 18: .gallery-list,\A 19: .gallery-list li {\A 20: 	@include flexbox();\A 21: 	@include flex-direction(#{column});\A 22: 	@include justify-content(#{center});\A 23: 	@include align-items(#{center});\A 24: }\A 25: "; }

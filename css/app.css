@@ -496,6 +496,10 @@ ul, ol {
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer; }
 
+.box-position-click {
+  position: fixed;
+  bottom: 1em; }
+
 .box-1 {
   animation: box1-animation 10s infinite; }
 
@@ -544,7 +548,6 @@ ul, ol {
   flex-direction: column;
   padding: 1em;
   text-align: center;
-  opacity: 0;
   -webkit-transition: opacity 2s ease;
   -moz-transition: opacity 2s ease;
   -ms-transition: opacity 2s ease;
@@ -606,7 +609,13 @@ ul, ol {
 .mobile-select,
 .main,
 .main-poke {
-  display: none; }
+  /* display: none; */
+  transition: height .5s, width .5s, opacity .5s ease; }
+
+.hide {
+  opacity: 0;
+  height: .1em;
+  width: .1em; }
 
 .main,
 .gallery-section,
@@ -685,6 +694,9 @@ ul, ol {
 
 .reveal {
   opacity: 1; }
+
+.main-poke {
+  /* @include flexbox(); */ }
 
 .cardBox {
   padding: 1em;
