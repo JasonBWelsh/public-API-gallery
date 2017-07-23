@@ -1,10 +1,18 @@
 const body = document.querySelector('body');
 const header = document.querySelector('.main-header');
+const name = document.querySelector('.name');
 const mobileSelect = document.querySelector('.mobile-select');
+const infoDiv = document.querySelector('.info');
+//
 let numbers = []; // holds random nums for card indexes 
 const gallerySection = document.querySelector('.gallery-section');
 const galleryList = gallerySection.querySelector('.gallery-list');
-const infoDiv = document.querySelector('.info');
+
+// landing page
+const landingWrap = document.querySelector('.landing');
+const gallerySelectBtn = document.querySelector('.gallery-select-btn');
+const mtgBtn = document.querySelector('.mtg-gallery-btn');
+const pokeBtn = document.querySelector('.poke-gallery-btn');
 // Card Box 
 const cardBox = document.querySelector('.cardBox');
 const cardBoxCloseBtn = cardBox.querySelector('.cardBox-closeBtn');
@@ -12,6 +20,22 @@ const cardBoxRightArw = cardBox.querySelector('.cardBox-rightArw');
 const cardBoxLeftArw = cardBox.querySelector('.cardBox-leftArw');
 const cardBoxContainer = cardBox.querySelector('.cardBox-container');
 //
+
+// landing page
+landingWrap.addEventListener('click', (e) => {
+	let target = e.target;
+	if (target.classList.contains('gallery-select-btn')) {// remove landing overlay and show header
+		landingWrap.style.display = 'none';
+		header.style.display = 'flex';
+		if (target.classList.contains('mtg-gallery-btn')) { // show mobileSelect and MtG
+			mobileSelect.style.display = 'flex';
+		}
+		if (target.classList.contains('poke-gallery-btn')) {
+			name.textContent = "PokeAPI Gallery (Under Construction)"
+		}
+	}
+});
+
 
 // Generate list of random numbers between 1-100 to use as array indexes
 function getRandomNumbers(x) {
@@ -165,4 +189,6 @@ $(document).ready(function() {
 	infoDiv.classList.add('reveal');
 	header.classList.add('reveal');
 });
+
+
 

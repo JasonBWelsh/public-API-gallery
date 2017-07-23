@@ -1,22 +1,23 @@
 /*
 Error: Undefined mixin 'flexbox'.
-        on line 5 of scss/layout/main.scss, in `flexbox'
-        from line 5 of scss/layout/main.scss
+        on line 13 of scss/layout/main.scss, in `flexbox'
+        from line 13 of scss/layout/main.scss
 
-1: .main,
-2: .gallery-section,
-3: .gallery-list,
-4: .gallery-list li {
-5: 	@include flexbox();
-6: 	@include flex-direction(#{column});
-7: 	@include justify-content(#{center});
-8: 	@include align-items(#{center});
-9: }
-10: 
+8: 
+9: .main,
+10: .gallery-section,
+11: .gallery-list,
+12: .gallery-list li {
+13: 	@include flexbox();
+14: 	@include flex-direction(#{column});
+15: 	@include justify-content(#{center});
+16: 	@include align-items(#{center});
+17: }
+18: 
 
 Backtrace:
-scss/layout/main.scss:5:in `flexbox'
-scss/layout/main.scss:5
+scss/layout/main.scss:13:in `flexbox'
+scss/layout/main.scss:13
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
@@ -68,4 +69,4 @@ scss/layout/main.scss:5
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flexbox'.\A         on line 5 of scss/layout/main.scss, in `flexbox'\A         from line 5 of scss/layout/main.scss\A \A 1: .main,\A 2: .gallery-section,\A 3: .gallery-list,\A 4: .gallery-list li {\A 5: 	@include flexbox();\A 6: 	@include flex-direction(#{column});\A 7: 	@include justify-content(#{center});\A 8: 	@include align-items(#{center});\A 9: }\A 10: "; }
+  content: "Error: Undefined mixin 'flexbox'.\A         on line 13 of scss/layout/main.scss, in `flexbox'\A         from line 13 of scss/layout/main.scss\A \A 8: \A 9: .main,\A 10: .gallery-section,\A 11: .gallery-list,\A 12: .gallery-list li {\A 13: 	@include flexbox();\A 14: 	@include flex-direction(#{column});\A 15: 	@include justify-content(#{center});\A 16: 	@include align-items(#{center});\A 17: }\A 18: "; }

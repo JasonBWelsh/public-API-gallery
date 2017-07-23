@@ -5,37 +5,17 @@
 }
 
 body {
+	/* background: $clear-blue;
+	background: linear-gradient(to right, $clear-blue, $clear-green); */
 
-	background: #159957;
-	background: linear-gradient(to right, #155799, #159957);
+	background: $kashmir-grey;
+	background: linear-gradient(to right, $kashmir-grey, $kashmir-purple);
 
-
-	/* background: $darker-crimson; */
-	height: 100%;
+	height: 100vh;
 	width: 100vw;
 	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{normal}, $lh: 1.5);
-	/* @include transition(background-color .4s ease); */
-	/* animation: bg-animation 20s infinite; */
 } 
 
-// Body BG Animation Keyframes
-/* @keyframes bg-animation {
- 0% {
-    background-color: $darker-crimson;
-  }
-  25% {
-  	background-color: $dark-crimson;
-  }
-  50% {
-    background-color: $darker-crimson;
-  }
-  75% {
-  	background-color: $dark-crimson;
-  }
-  100% {
-    background-color: $darker-crimson;
-  }
-} */
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
@@ -49,4 +29,14 @@ h1 {
 ul, ol {
 	list-style: none;
 	padding-left: 0;
+}
+
+// Poke base
+
+.poke-wrap {  // wraps whole poke page
+	/* background: $dark-blue-grey;
+	background: linear-gradient(to right, $dark-blue-grey, $light-blue-grey); */
+	background: $kashmir-grey;
+	background: linear-gradient(to top, $kashmir-grey, $kashmir-purple);
+	height: 100vh;
 }

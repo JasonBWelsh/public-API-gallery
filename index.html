@@ -4,12 +4,12 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
       <link href="css/app.css" rel="stylesheet" type="text/css">
-      <title>Public API Gallery</title>
+      <title>MtG API Gallery</title>
   </head>
   <body>
     <header class="main-header">
       <h1 class="name">
-        MAGIC: The Gathering
+        MtG API Gallery
       </h1>
       <ul class="mobile-select"> <!-- for selecting API data on mobile -->
         <li>red</li>
@@ -21,25 +21,44 @@
       </ul>
     </header>
 
-    <main class="main">
-      <div class="info">
-        Click a color button to generate a random selection of 12 cards from 100 sorted by color type
-      </div>
-      <section class="gallery-section">
-        <ul class="gallery-list">
-        </ul>
-      </section>
+    <main class="main-wrapper">
 
-      <section class="cardBox">
-        <div class="cardBox-closeBtn"></div>
-        <div class="cardBox-leftArw"></div>
-        <div class="cardBox-rightArw"></div>
-        <div class="cardBox-container">
-          <img src="" alt="">
+      <section class="landing"> <!-- landing page -->
+                                <!-- Other page elements are set to display:none in main.scss until a gallery btn is clicked -->
+        <div class="outer-box">
+          <div class="box-1 box">
+            <h2 class="mtg-gallery-btn gallery-select-btn">MtG</h2>
+          </div>
+          <div class="box-2 box">
+            <h2 class="poke-gallery-btn gallery-select-btn">Poke</h2>
+          </div>
+        </div>
+        <div class="info">
+          <p>Choose an API gallery</p>
         </div>
       </section>
-    </main>
 
+      <div class="main"> <!-- contains MtG gallery -->
+        
+        <section class="gallery-section">
+          <ul class="gallery-list">
+          </ul>
+        </section>
+
+        <section class="cardBox">
+          <div class="cardBox-closeBtn"></div>
+          <div class="cardBox-leftArw"></div>
+          <div class="cardBox-rightArw"></div>
+          <div class="cardBox-container">
+            <img src="" alt="">
+          </div>
+        </section>
+      </div>
+
+      <div class="main-poke"> <!-- contains PokeAPI gallery -->
+      </div>
+
+    </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/scripts.js"></script>

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+@import url('https://fonts.googleapis.com/css?family=Exo');
 //Uitlities 
 @import 'utilities/functions',
-	    'utilities/helpers',
+	'utilities/helpers',
         'utilities/mixins',
         'utilities/variables';
 
@@ -10,10 +11,13 @@
         'base/base';
 
 //Layout
-@import 'layout/containers',
+@import 'layout/landing',
+        'layout/containers',
         'layout/header',
         'layout/main',
-        'layout/nav';
+        'layout/mainpoke',
+        'layout/nav',
+        'layout/cardbox';
 
 //Components
 @import 'components/buttons',

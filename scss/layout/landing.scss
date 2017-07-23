@@ -1,0 +1,108 @@
+
+.landing,
+.box {
+	@include flexbox();
+	@include justify-content(#{center});
+	@include align-items(#{center});
+}
+
+.landing { 
+	@include flex-direction(#{column});
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.info {
+	@include margin(2em 1em 1em);
+	@include pad(1em);
+	opacity: 0;
+	@media (min-width: $break-m) {
+		@include margin(3em 0 0);
+		max-width: 80%;
+	}
+	// opening effect
+	@include transition(all 2s ease);
+	transition-delay: .5s;
+}
+
+.outer-box,
+.box {
+	border: 1px solid $white;
+}
+
+.outer-box {
+	height: 13em;
+	width: 13em;
+	@include pad(.5em);
+	transform: rotate(-45deg);
+	animation: outer-box-animation 20s infinite;
+	h2 {
+		font-size: 1rem;
+		font-weight: normal;
+		@include pad(1.5em);
+	}
+}
+
+.box {
+	height: 5em;
+	width: 5em;
+	@include margin(.5em);
+	border-radius: 50%;
+	@include transition(all .4s ease);
+	&:hover {
+		background-color: rgba($white, .1);
+		cursor: pointer;
+	}
+}
+
+.box-1 {
+	animation: box1-animation 10s infinite;
+}
+
+.box-2 {
+	transform: translate(6em); // offset initial start point by 6em
+	animation: box2-animation 10s infinite;
+}
+
+.outer-box,
+.box-1,
+.box-2 {
+	animation-delay: .7s;
+}
+
+ @keyframes outer-box-animation {
+ 0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+} 
+
+ @keyframes box1-animation {
+ 0% {
+    transform: translate(0em) rotate(0deg);
+  }
+  50% {
+    transform: translate(6em) rotate(180deg);
+  }
+  100% {
+    transform: translate(0em) rotate(360deg);
+  }
+} 
+
+ @keyframes box2-animation {
+ 0% {
+    transform: translate(6em) rotate(180deg);
+  }
+  50% {
+    transform: translate(0em) rotate(360deg);
+  }
+  100% {
+    transform: translate(6em) rotate(180deg);
+  }
+} 

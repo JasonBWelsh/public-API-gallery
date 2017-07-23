@@ -1,3 +1,11 @@
+// Els set to display:none for single page function
+.main-header,
+.mobile-select,
+.main,
+.main-poke {
+	display: none;
+}
+
 .main,
 .gallery-section,
 .gallery-list,
@@ -31,10 +39,12 @@
 		height: 24em;
 		border-radius: 1em;
 		overflow: auto;
-		@include transition(all .4s ease);
+		@include transition(all .3s cubic-bezier(.39,-0.18,.66,1.29));
+		filter: grayscale(1);
 		&:hover {
-			transform: rotate(-5deg);
-			box-shadow: 1px 1px 1px 2px $dark;
+			transform: rotate(2deg);
+			box-shadow: 1px 1px 1px 1px $dark;
+			filter: grayscale(0);
 		}
 	}
 	span {
@@ -50,146 +60,7 @@
 	}
 }
 
-.info {
-	@include margin(3em 1em 1em);
-	@include pad(1em);
-	/* background: $dark; */
-	/* box-shadow: 1px 1px 5px 6px $dark; */
-	opacity: 0;
-	@media (min-width: $break-m) {
-		@include margin(5em 0 0);
-		max-width: 80%;
-	}
-	// opening effect
-	@include transition(all 2s ease);
-	transition-delay: 1s;
-}
 
 .reveal {
 	opacity: 1;
 }
-
-// cardBox
-
-.cardBox {
-	@include pad(1em);
-	position: relative; // for icons
-	position: fixed;
-	top: 10%;
-	height: 550px;
-	width: 95%;
-	z-index: 100;
-	background: $dark;
-	opacity: 0;
-	transform: translateY(50em);
-	box-shadow: 1px 1px 5px 6px $dark;
-	@include transition(transform .9s ease);
-	/* @include transition(opacity .5s ease); */
-	@media (min-width: $break-m) {
-		width: 60%;
-		top: 15%;
-	}
-	@media (min-width: $break-l) {
-		width: 40%;
-	}
-	// animation bg
-	animation: bg-animation 20s infinite;
-	&:hover .cardBox-closeBtn,
-	&:hover .cardBox-leftArw,
-	&:hover .cardBox-rightArw {
-		height: 3em;
-		width: 3em;
-	}
-}
-
-.cardBox-closeBtn,
-.cardBox-leftArw,
-.cardBox-rightArw {
-	height: 2em;
-	width: 2em;
-	position: absolute;
-	@include transition(all .3s ease);
-}
-
-.cardBox-closeBtn {
-	top: .5em;
-	right: .5em;
-	height: 2em;
-	width: 2em;
-	background: url(../img/close.svg);
-	background-size: cover;
-	@include transition(all .3s ease);
-	&:hover {
-		transform: rotate(90deg);
-	}
-}
-
-.cardBox-leftArw,
-.cardBox-rightArw {
-	background: url(../img/arrow.svg);
-	background-size: cover;
-}
-
-.cardBox-leftArw {
-	top: 50%;
-	left: 0;
-	transform: rotate(45deg);
-	@media (min-width: $break-m) {
-		left: -1.5em;
-	}
-	&:hover {
-		transform: rotate(-140deg);
-	}
-}
-
-.cardBox-rightArw {
-	top: 50%;
-	right: 0;
-	transform: rotate(-135deg);
-	@media (min-width: $break-m) {
-		right: -1.5em;
-	}
-	&:hover {
-		transform: rotate(45deg);
-	}
-}
-
-.cardBox-container {
-	height: 100%;
-	@include flexbox();
-	@include flex-direction(#{column});
-	@include align-items(#{center});
-	img {
-		@include margin(1em 0);
-		/* height: 384px; */
-		width: 256px;
-		border-radius: 1em;
-	}
-	p {
-		margin-top: 0;
-	}
-}
-
-.cardBoxReveal {
-	opacity: .95;
-	transform: translateY(0);
-}
-
-// .cardBox BG Animation Keyframes
- @keyframes bg-animation {
- 0% {
-    background-color: $clear-blue;
-  }
-  25% {
-  	background-color: $clear-green;
-  }
-  50% {
-    background-color: $clear-blue;
-  }
-  75% {
-  	background-color: $clear-green;
-  }
-  100% {
-    background-color: $clear-blue;
-  }
-} 

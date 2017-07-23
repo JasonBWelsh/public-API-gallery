@@ -1,24 +1,26 @@
 /*
-Error: Undefined variable: "$kashmir-grey".
-        on line 11 of scss/base/base.scss
+Error: Undefined mixin 'flexbox'.
+        on line 4 of scss/layout/landing.scss, in `flexbox'
+        from line 4 of scss/layout/landing.scss
 
-6: 
-7: body {
-8: 	/* background: $clear-blue;
-9: 	background: linear-gradient(to right, $clear-blue, $clear-green); *\/
-10: 
-11: 	background: $kashmir-grey;
-12: 	background: linear-gradient(to right, $kashmir-grey, $kashmir-purple);
-13: 
-14: 	height: 100vh;
-15: 	width: 100vw;
-16: 	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{normal}, $lh: 1.5);
+1: 
+2: .landing,
+3: .box {
+4: 	@include flexbox();
+5: 	@include justify-content(#{center});
+6: 	@include align-items(#{center});
+7: }
+8: 
+9: .landing { 
 
 Backtrace:
-scss/base/base.scss:11
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/tree/variable.rb:49:in `_perform'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/tree/node.rb:58:in `perform'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+scss/layout/landing.scss:4:in `flexbox'
+scss/layout/landing.scss:4
+/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `with_mixin'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
@@ -65,4 +67,4 @@ scss/base/base.scss:11
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$kashmir-grey\".\A         on line 11 of scss/base/base.scss\A \A 6: \A 7: body {\A 8: 	/* background: $clear-blue;\A 9: 	background: linear-gradient(to right, $clear-blue, $clear-green); */\A 10: \A 11: 	background: $kashmir-grey;\A 12: 	background: linear-gradient(to right, $kashmir-grey, $kashmir-purple);\A 13: \A 14: 	height: 100vh;\A 15: 	width: 100vw;\A 16: 	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{normal}, $lh: 1.5);"; }
+  content: "Error: Undefined mixin 'flexbox'.\A         on line 4 of scss/layout/landing.scss, in `flexbox'\A         from line 4 of scss/layout/landing.scss\A \A 1: \A 2: .landing,\A 3: .box {\A 4: 	@include flexbox();\A 5: 	@include justify-content(#{center});\A 6: 	@include align-items(#{center});\A 7: }\A 8: \A 9: .landing { "; }
