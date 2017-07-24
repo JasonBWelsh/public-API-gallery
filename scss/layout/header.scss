@@ -30,6 +30,7 @@
 		flex: 1 33%;
 		@include pad(.3em .7em);
 		@include transition(all .4s ease);
+		@include border-radius(5em);
 		@media (min-width: $break-m) {
 			@include margin(.2em);
 			flex: 1 27%;

@@ -506,11 +506,11 @@ ul, ol {
   transform: translate(6em);
   animation: box2-animation 10s infinite; }
 
-.outer-box,
+/* .outer-box,
 .box-1,
 .box-2 {
-  animation-delay: .7s; }
-
+	animation-delay: .7s;
+} */
 @keyframes outer-box-animation {
   0% {
     transform: rotate(-45deg); }
@@ -615,7 +615,11 @@ ul, ol {
     -moz-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    transition: all 0.4s ease;
+    -webkit-border-radius: 5em;
+    border-radius: 5em;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
     @media (min-width: 768px) {
       .mobile-select li {
         margin: 0.2em;
