@@ -539,7 +539,9 @@ ul, ol {
   border: none;
   height: 8em;
   width: 8em;
-  border: 1px solid;
+  border: 1px solid #fff;
+  border-left: none;
+  border-bottom: none;
   transform: rotate(0);
   animation: none; }
   @media (min-width: 768px) {
@@ -549,16 +551,17 @@ ul, ol {
     height: 2.5em;
     width: 2.5em;
     animation: none; }
-  .bubble-stick h2 {
+  .bubble-stick .gallery-select-btn {
     font-size: .8rem;
     background: #323232;
     border-radius: 50%;
+    /* transform: rotate(-45deg); */
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease; }
-    .bubble-stick h2:hover {
+    .bubble-stick .gallery-select-btn:hover {
       transform: scale(1.1); }
 
 .main-header,
