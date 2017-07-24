@@ -111,3 +111,11 @@
     transform: translate(6em) rotate(180deg);
   }
 } 
+
+// gallery select to fixed styles
+.bubble-stick {
+	position: fixed;
+	bottom: 0;
+	z-index: 50;
+	border: none;
+}

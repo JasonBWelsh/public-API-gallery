@@ -10,6 +10,8 @@ const galleryList = gallerySection.querySelector('.gallery-list');
 
 // landing page
 const landingWrap = document.querySelector('.landing');
+const outerBox = document.querySelector('.outer-box');
+const bubbleLink = document.querySelector('.box');
 const gallerySelectBtn = document.querySelector('.gallery-select-btn');
 const mtgBtn = document.querySelector('.mtg-gallery-btn');
 const pokeBtn = document.querySelector('.poke-gallery-btn');
@@ -22,23 +24,31 @@ const cardBoxContainer = cardBox.querySelector('.cardBox-container');
 //Poke Section
 const pokeWrap = document.querySelector('.main-poke');
 
+
 // landing page
 landingWrap.addEventListener('click', (e) => {
 	let target = e.target;
 	if (target.classList.contains('gallery-select-btn')) {// remove landing overlay and show header
-		landingWrap.style.display = 'none';
+		outerBox.classList.add('bubble-stick');
+		infoDiv.style.display = 'none';
+		/*landingWrap.style.display = 'none';*/
 		header.style.display = 'flex';
 		header.classList.add('headerReveal');
 		header.classList.remove('hide');
 		gallerySelectBtn.classList.add('btn-position-click');
 		if (target.classList.contains('mtg-gallery-btn')) { // show mobileSelect and MtG
+			name.textContent = "MtG API Gallery";
 			mobileSelect.style.display = 'flex';
 			mobileSelect.classList.remove('hide');
+			gallerySection.classList.remove('hide');
+			pokeWrap.classList.add('hide');
 		}
 		if (target.classList.contains('poke-gallery-btn')) {
-			name.textContent = "PokeAPI Gallery (Under Construction)"
+			name.textContent = "PokeAPI Gallery";
 			pokeWrap.style.display = 'flex';
 			pokeWrap.classList.remove('hide');
+			mobileSelect.classList.add('hide');
+			gallerySection.classList.add('hide');
 		}
 	}
 });

@@ -533,6 +533,12 @@ ul, ol {
     transform: translate(0em) rotate(360deg); }
   100% {
     transform: translate(6em) rotate(180deg); } }
+.bubble-stick {
+  position: fixed;
+  bottom: 0;
+  z-index: 50;
+  border: none; }
+
 .main-header,
 .mobile-select {
   display: -webkit-box;
