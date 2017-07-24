@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$kashmir-grey".
-        on line 11 of scss/base/base.scss
+        on line 12 of scss/base/base.scss
 
-6: 
-7: body {
-8: 	/* background: $clear-blue;
-9: 	background: linear-gradient(to right, $clear-blue, $clear-green); *\/
-10: 
-11: 	background: $kashmir-grey;
-12: 	background: linear-gradient(to right, $kashmir-grey, $kashmir-purple);
-13: 
-14: 	height: 100vh;
-15: 	width: 100vw;
-16: 	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{normal}, $lh: 1.5);
+7: 
+8: body {
+9: 	/* background: $clear-blue;
+10: 	background: linear-gradient(to right, $clear-blue, $clear-green); *\/
+11: 
+12: 	background: $kashmir-grey;
+13: 	background: linear-gradient(to right, $kashmir-grey, $kashmir-purple);
+14: 
+15: 	height: 100vh;
+16: 	width: 100vw;
+17: 	overflow-x: hidden;
 
 Backtrace:
-scss/base/base.scss:11
+scss/base/base.scss:12
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/tree/node.rb:58:in `perform'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -55,17 +55,14 @@ scss/base/base.scss:11
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:294:in `watch'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin.rb:109:in `method_missing'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
-/var/lib/gems/2.3.0/gems/sass-3.4.24/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/var/lib/gems/2.3.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$kashmir-grey\".\A         on line 11 of scss/base/base.scss\A \A 6: \A 7: body {\A 8: 	/* background: $clear-blue;\A 9: 	background: linear-gradient(to right, $clear-blue, $clear-green); */\A 10: \A 11: 	background: $kashmir-grey;\A 12: 	background: linear-gradient(to right, $kashmir-grey, $kashmir-purple);\A 13: \A 14: 	height: 100vh;\A 15: 	width: 100vw;\A 16: 	@include font-styles($family: $font-stack-primary, $color: $white, $weight: #{normal}, $lh: 1.5);"; }
+  content: "Error: Undefined variable: \"$kashmir-grey\".\A         on line 12 of scss/base/base.scss\A \A 7: \A 8: body {\A 9: 	/* background: $clear-blue;\A 10: 	background: linear-gradient(to right, $clear-blue, $clear-green); */\A 11: \A 12: 	background: $kashmir-grey;\A 13: 	background: linear-gradient(to right, $kashmir-grey, $kashmir-purple);\A 14: \A 15: 	height: 100vh;\A 16: 	width: 100vw;\A 17: 	overflow-x: hidden;"; }

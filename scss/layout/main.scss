@@ -1,3 +1,4 @@
+
 // Els set to display:none for single page function
 .main-header,
 .mobile-select,
@@ -11,6 +12,7 @@
 	opacity: 0;
 	height: .1em; 
 	width: .1em;
+	transform: translate(100em);
 }
 
 .main,
@@ -43,8 +45,8 @@
 	}
 	img {
 		border: 1px solid $dark;
-		width: 16em;
-		height: 24em;
+		width: 10em;
+		height: 16em;
 		border-radius: 1em;
 		overflow: auto;
 		@include transition(all .3s cubic-bezier(.39,-0.18,.66,1.29));
@@ -70,8 +72,4 @@
 
 .reveal {
 	opacity: 1;
-}
-
-.wrapper-reveal { // for 
-
 }

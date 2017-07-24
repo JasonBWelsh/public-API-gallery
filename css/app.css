@@ -403,6 +403,7 @@ body {
   background: linear-gradient(to right, #614385, #516395);
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
   color: #fff;
   font-weight: normal;
@@ -418,13 +419,6 @@ h1 {
 ul, ol {
   list-style: none;
   padding-left: 0; }
-
-.poke-wrap {
-  /* background: $dark-blue-grey;
-  background: linear-gradient(to right, $dark-blue-grey, $light-blue-grey); */
-  background: #614385;
-  background: linear-gradient(to top, #614385, #516395);
-  height: 100vh; }
 
 .landing,
 .box {
@@ -535,9 +529,32 @@ ul, ol {
     transform: translate(6em) rotate(180deg); } }
 .bubble-stick {
   position: fixed;
-  bottom: 0;
+  bottom: 2em;
   z-index: 50;
-  border: none; }
+  border: none;
+  height: 8em;
+  width: 8em;
+  border: 1px solid;
+  transform: rotate(0);
+  animation: none; }
+  @media (min-width: 768px) {
+    .bubble-stick {
+      left: 2em; } }
+  .bubble-stick .box {
+    height: 2.5em;
+    width: 2.5em;
+    animation: none; }
+  .bubble-stick h2 {
+    font-size: .8rem;
+    background: #323232;
+    border-radius: 50%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    .bubble-stick h2:hover {
+      transform: scale(1.1); }
 
 .main-header,
 .mobile-select {
@@ -621,7 +638,8 @@ ul, ol {
 .hide {
   opacity: 0;
   height: .1em;
-  width: .1em; }
+  width: .1em;
+  transform: translate(100em); }
 
 .main,
 .gallery-section,
@@ -667,8 +685,8 @@ ul, ol {
         flex-basis: 33%; } }
   .gallery-list img {
     border: 1px solid #323232;
-    width: 16em;
-    height: 24em;
+    width: 10em;
+    height: 16em;
     border-radius: 1em;
     overflow: auto;
     -webkit-transition: all 0.3s cubic-bezier(0.39, -0.18, 0.66, 1.29);
