@@ -179,10 +179,12 @@ mobileSelect.addEventListener('click', (e) => {
 			populateLightbox(cards, counter);
 
 		}
-		console.log(magicAPI);
 		$.getJSON(magicAPI, displayCards);
 	}
 });
+
+// PokeAPI code
+/*$.getJSON(pokeAPI, pokeOptions, displayPoke);*/ // <---- COMMENTED OUT BECAUSE WILL BREAK UNLESS FINISHED!!
 
 // Lightbox fucntionality
 

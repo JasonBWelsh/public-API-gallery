@@ -52,7 +52,7 @@
 		@include transition(all .3s cubic-bezier(.39,-0.18,.66,1.29));
 		filter: grayscale(1);
 		&:hover {
-			transform: rotate(2deg);
+			transform: scale(1.01)/* rotate(2deg) */;
 			box-shadow: 1px 1px 1px 1px $dark;
 			filter: grayscale(0);
 		}

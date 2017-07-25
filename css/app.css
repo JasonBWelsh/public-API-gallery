@@ -506,11 +506,6 @@ ul, ol {
   transform: translate(6em);
   animation: box2-animation 10s infinite; }
 
-/* .outer-box,
-.box-1,
-.box-2 {
-	animation-delay: .7s;
-} */
 @keyframes outer-box-animation {
   0% {
     transform: rotate(-45deg); }
@@ -535,34 +530,40 @@ ul, ol {
 .bubble-stick {
   position: fixed;
   bottom: 2em;
+  left: 1.2em;
   z-index: 50;
   border: none;
-  height: 8em;
-  width: 8em;
+  height: 4em;
+  width: 6em;
   border: 1px solid #fff;
-  border-left: none;
-  border-bottom: none;
-  transform: rotate(0);
+  border-top: none;
+  border-right: none;
+  transform: rotate(-90deg);
   animation: none; }
   @media (min-width: 768px) {
     .bubble-stick {
-      left: 2em; } }
+      left: 2em;
+      bottom: 5em; } }
   .bubble-stick .box {
-    height: 2.5em;
-    width: 2.5em;
+    height: .1em;
+    width: .5em;
     animation: none; }
   .bubble-stick .gallery-select-btn {
     font-size: .8rem;
     background: #323232;
     border-radius: 50%;
-    /* transform: rotate(-45deg); */
+    transform: rotate(45deg);
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease; }
     .bubble-stick .gallery-select-btn:hover {
-      transform: scale(1.1); }
+      transform: scale(1.1) rotate(45deg); }
+  .bubble-stick .poke-gallery-btn {
+    transform: translateY(1em) translateX(-1em) rotate(45deg); }
+    .bubble-stick .poke-gallery-btn:hover {
+      transform: scale(1.1) translateY(1em) translateX(-1em) rotate(45deg); }
 
 .main-header,
 .mobile-select {
@@ -708,7 +709,7 @@ ul, ol {
     transition: all 0.3s cubic-bezier(0.39, -0.18, 0.66, 1.29);
     filter: grayscale(1); }
     .gallery-list img:hover {
-      transform: rotate(2deg);
+      transform: scale(1.01);
       box-shadow: 1px 1px 1px 1px #323232;
       filter: grayscale(0); }
   .gallery-list span {
