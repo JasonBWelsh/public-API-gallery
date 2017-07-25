@@ -35,6 +35,10 @@ landingWrap.addEventListener('click', (e) => {
 		header.style.display = 'flex';
 		header.classList.add('headerReveal');
 		header.classList.remove('hide');
+
+		// get landing out of way for clicks
+		landingWrap.classList.add('landing-out-of-way');
+
 		gallerySelectBtn.classList.add('btn-position-click');
 		if (target.classList.contains('mtg-gallery-btn')) { // show mobileSelect and MtG
 			name.textContent = "MtG API Gallery";
@@ -61,7 +65,6 @@ function getRandomNumbers(x) {
 		let number = Math.floor(Math.random() * 100) + 1;
 		numbers.push(number);
 	}
-	console.log(numbers);
 	return numbers;
 }
 
@@ -184,7 +187,80 @@ mobileSelect.addEventListener('click', (e) => {
 });
 
 // PokeAPI code
-/*$.getJSON(pokeAPI, pokeOptions, displayPoke);*/ // <---- COMMENTED OUT BECAUSE WILL BREAK UNLESS FINISHED!!
+
+// img on sides of cube
+const front = document.querySelector('.front');
+const back = document.querySelector('.back');
+const left = document.querySelector('.left');
+const right = document.querySelector('.right');
+
+const pokeButton = document.querySelector('.poke-btn');
+
+let jasFavs = [197, 1, 78, 196];
+
+// display jasmine's fav pokemon
+/*let bulbasaur = "http://pokeapi.co/api/v2/pokemon/1/";
+function displayBulbasaur(data) {
+	let name = data.name;
+	let image = data.sprites.front_default;
+	front.setAttribute("src", image);
+}
+$.getJSON(bulbasaur, displayBulbasaur);
+
+let umbreon = "http://pokeapi.co/api/v2/pokemon/197/";
+function displayUmbreon(data) {
+	let name = data.name;
+	let image = data.sprites.front_default;
+	back.setAttribute("src", image);
+}
+$.getJSON(umbreon, displayUmbreon);
+
+let rapidash = "http://pokeapi.co/api/v2/pokemon/78/";
+function displayRapidash(data) {
+	let name = data.name;
+	let image = data.sprites.front_default;
+	left.setAttribute("src", image);
+}
+$.getJSON(rapidash, displayRapidash);
+
+let espeon = "http://pokeapi.co/api/v2/pokemon/196/";
+function displayEspeon(data) {
+	let name = data.name;
+	let image = data.sprites.front_default;
+	right.setAttribute("src", image);
+}
+$.getJSON(espeon, displayEspeon);*/
+
+pokeButton.addEventListener('click', () => {
+	// display jasmine's fav pokemon
+	let bulbasaur = "http://pokeapi.co/api/v2/pokemon/1/";
+	function displayBulbasaur(data) {
+		let image = data.sprites.front_default;
+		front.setAttribute("src", image);
+	}
+	$.getJSON(bulbasaur, displayBulbasaur);
+
+	let umbreon = "http://pokeapi.co/api/v2/pokemon/197/";
+	function displayUmbreon(data) {
+		let image = data.sprites.front_default;
+		back.setAttribute("src", image);
+	}
+	$.getJSON(umbreon, displayUmbreon);
+
+	let rapidash = "http://pokeapi.co/api/v2/pokemon/78/";
+	function displayRapidash(data) {
+		let image = data.sprites.front_default;
+		left.setAttribute("src", image);
+	}
+	$.getJSON(rapidash, displayRapidash);
+
+	let espeon = "http://pokeapi.co/api/v2/pokemon/196/";
+	function displayEspeon(data) {
+		let image = data.sprites.front_default;
+		right.setAttribute("src", image);
+	}
+	$.getJSON(espeon, displayEspeon);
+});
 
 // Lightbox fucntionality
 
