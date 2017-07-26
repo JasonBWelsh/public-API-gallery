@@ -809,6 +809,9 @@ ul, ol {
 @keyframes photo-cube-animation {
   50% {
     transform: rotateY(-270deg) translate3d(200px, -10px, 10px); } }
+.poke-border {
+  border: 1px solid #fff; }
+
 .poke-btn-wrap {
   margin: 3em 0 0;
   padding: 1em; }
@@ -825,7 +828,8 @@ ul, ol {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .poke-btn:hover {
-    transform: scale(1.2); }
+    transform: scale(1.2);
+    cursor: pointer; }
 
 .cardBox {
   padding: 1em;
@@ -854,8 +858,8 @@ ul, ol {
     .cardBox {
       width: 40%; } }
   .cardBox:hover .cardBox-closeBtn, .cardBox:hover .cardBox-leftArw, .cardBox:hover .cardBox-rightArw {
-    height: 3em;
-    width: 3em; }
+    height: 2.5em;
+    width: 2.5em; }
 
 .cardBox-closeBtn,
 .cardBox-leftArw,
@@ -888,26 +892,29 @@ ul, ol {
 .cardBox-rightArw {
   background: url(../img/arrow.svg);
   background-size: cover; }
+  .cardBox-leftArw:hover,
+  .cardBox-rightArw:hover {
+    cursor: pointer; }
 
 .cardBox-leftArw {
   top: 50%;
   left: 0;
-  transform: rotate(45deg); }
+  transform: rotate(-140deg); }
   @media (min-width: 768px) {
     .cardBox-leftArw {
       left: -1.5em; } }
   .cardBox-leftArw:hover {
-    transform: rotate(-140deg); }
+    transform: scale(1.2) rotate(-140deg); }
 
 .cardBox-rightArw {
   top: 50%;
   right: 0;
-  transform: rotate(-135deg); }
+  transform: rotate(45deg); }
   @media (min-width: 768px) {
     .cardBox-rightArw {
       right: -1.5em; } }
   .cardBox-rightArw:hover {
-    transform: rotate(45deg); }
+    transform: scale(1.2) rotate(45deg); }
 
 .cardBox-container {
   height: 100%;

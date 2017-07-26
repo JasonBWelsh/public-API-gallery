@@ -98,6 +98,10 @@
 
 // Poke button wrap
 
+.poke-border {
+	border: 1px solid $white;
+}
+
 .poke-btn-wrap {
 	@include margin(3em 0 0);
 	@include pad(1em);
@@ -112,5 +116,6 @@
 	@include transition(all .4s ease);
 	&:hover {
 		transform: scale(1.2);
+		cursor: pointer;
 	}
 }

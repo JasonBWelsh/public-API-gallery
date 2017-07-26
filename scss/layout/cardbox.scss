@@ -26,8 +26,8 @@
 	&:hover .cardBox-closeBtn,
 	&:hover .cardBox-leftArw,
 	&:hover .cardBox-rightArw {
-		height: 3em;
-		width: 3em;
+		height: 2.5em;
+		width: 2.5em;
 	}
 }
 
@@ -57,29 +57,32 @@
 .cardBox-rightArw {
 	background: url(../img/arrow.svg);
 	background-size: cover;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .cardBox-leftArw {
 	top: 50%;
 	left: 0;
-	transform: rotate(45deg);
+	transform: rotate(-140deg);
 	@media (min-width: $break-m) {
 		left: -1.5em;
 	}
 	&:hover {
-		transform: rotate(-140deg);
+		transform: scale(1.2) rotate(-140deg);
 	}
 }
 
 .cardBox-rightArw {
 	top: 50%;
 	right: 0;
-	transform: rotate(-135deg);
+	transform: rotate(45deg);
 	@media (min-width: $break-m) {
 		right: -1.5em;
 	}
 	&:hover {
-		transform: rotate(45deg);
+		transform: scale(1.2) rotate(45deg);
 	}
 }
 

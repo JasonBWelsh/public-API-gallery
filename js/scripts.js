@@ -23,6 +23,7 @@ const cardBoxLeftArw = cardBox.querySelector('.cardBox-leftArw');
 const cardBoxContainer = cardBox.querySelector('.cardBox-container');
 //Poke Section
 const pokeWrap = document.querySelector('.main-poke');
+const cubeContainer = document.querySelector('.cube-container');
 
 
 // landing page
@@ -232,11 +233,13 @@ function displayEspeon(data) {
 $.getJSON(espeon, displayEspeon);*/
 
 pokeButton.addEventListener('click', () => {
+	cubeContainer.style.background = 'none';
 	// display jasmine's fav pokemon
 	let bulbasaur = "https://pokeapi.co/api/v2/pokemon/1/";
 	function displayBulbasaur(data) {
 		let image = data.sprites.front_default;
 		front.setAttribute("src", image);
+		front.classList.add('poke-border');
 	}
 	$.getJSON(bulbasaur, displayBulbasaur);
 
@@ -244,6 +247,7 @@ pokeButton.addEventListener('click', () => {
 	function displayUmbreon(data) {
 		let image = data.sprites.front_default;
 		back.setAttribute("src", image);
+		back.classList.add('poke-border');
 	}
 	$.getJSON(umbreon, displayUmbreon);
 
@@ -251,6 +255,7 @@ pokeButton.addEventListener('click', () => {
 	function displayRapidash(data) {
 		let image = data.sprites.front_default;
 		left.setAttribute("src", image);
+		left.classList.add('poke-border');
 	}
 	$.getJSON(rapidash, displayRapidash);
 
@@ -258,6 +263,7 @@ pokeButton.addEventListener('click', () => {
 	function displayEspeon(data) {
 		let image = data.sprites.front_default;
 		right.setAttribute("src", image);
+		right.classList.add('poke-border');
 	}
 	$.getJSON(espeon, displayEspeon);
 });
