@@ -233,28 +233,28 @@ $.getJSON(espeon, displayEspeon);*/
 
 pokeButton.addEventListener('click', () => {
 	// display jasmine's fav pokemon
-	let bulbasaur = "http://pokeapi.co/api/v2/pokemon/1/";
+	let bulbasaur = "https://pokeapi.co/api/v2/pokemon/1/";
 	function displayBulbasaur(data) {
 		let image = data.sprites.front_default;
 		front.setAttribute("src", image);
 	}
 	$.getJSON(bulbasaur, displayBulbasaur);
 
-	let umbreon = "http://pokeapi.co/api/v2/pokemon/197/";
+	let umbreon = "https://pokeapi.co/api/v2/pokemon/197/";
 	function displayUmbreon(data) {
 		let image = data.sprites.front_default;
 		back.setAttribute("src", image);
 	}
 	$.getJSON(umbreon, displayUmbreon);
 
-	let rapidash = "http://pokeapi.co/api/v2/pokemon/78/";
+	let rapidash = "https://pokeapi.co/api/v2/pokemon/78/";
 	function displayRapidash(data) {
 		let image = data.sprites.front_default;
 		left.setAttribute("src", image);
 	}
 	$.getJSON(rapidash, displayRapidash);
 
-	let espeon = "http://pokeapi.co/api/v2/pokemon/196/";
+	let espeon = "https://pokeapi.co/api/v2/pokemon/196/";
 	function displayEspeon(data) {
 		let image = data.sprites.front_default;
 		right.setAttribute("src", image);
