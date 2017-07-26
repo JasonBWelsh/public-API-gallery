@@ -52,7 +52,7 @@
 	@include transition(all .4s ease);
 	&:hover {
 		background-color: rgba($white, .1);
-		cursor: pointer;
+		@extend %cursor-pointer;
 	}
 }
 

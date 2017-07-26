@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400");
 @import url("https://fonts.googleapis.com/css?family=Exo");
+.box:hover, .mobile-select li:hover, .gallery-list img:hover, .poke-btn:hover, .cardBox-closeBtn:hover, .cardBox-leftArw:hover,
+.cardBox-rightArw:hover {
+  cursor: pointer; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -492,8 +496,7 @@ ul, ol {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .box:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    cursor: pointer; }
+    background-color: rgba(255, 255, 255, 0.1); }
 
 .box-position-click {
   position: fixed;
@@ -637,8 +640,6 @@ ul, ol {
         flex: 1 27%;
         border: 1px solid #fff; } }
     .mobile-select li:hover {
-      /* background: $dark; */
-      /* color: $black; */
       transform: translateX(10px) rotate(-7deg); }
 
 .selected {
@@ -828,8 +829,7 @@ ul, ol {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .poke-btn:hover {
-    transform: scale(1.2);
-    cursor: pointer; }
+    transform: scale(1.2); }
 
 .cardBox {
   padding: 1em;
@@ -880,11 +880,11 @@ ul, ol {
   width: 2em;
   background: url(../img/close.svg);
   background-size: cover;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
   .cardBox-closeBtn:hover {
     transform: rotate(90deg); }
 
@@ -892,9 +892,6 @@ ul, ol {
 .cardBox-rightArw {
   background: url(../img/arrow.svg);
   background-size: cover; }
-  .cardBox-leftArw:hover,
-  .cardBox-rightArw:hover {
-    cursor: pointer; }
 
 .cardBox-leftArw {
   top: 50%;

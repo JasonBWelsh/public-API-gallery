@@ -116,6 +116,6 @@
 	@include transition(all .4s ease);
 	&:hover {
 		transform: scale(1.2);
-		cursor: pointer;
+		@extend %cursor-pointer;
 	}
 }

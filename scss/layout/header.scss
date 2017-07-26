@@ -37,8 +37,7 @@
 			border: 1px solid $white;
 		}
 		&:hover {
-			/* background: $dark; */
-			/* color: $black; */
+			@extend %cursor-pointer;
 			transform: translateX(10px) rotate(-7deg);
 		}
 	}
