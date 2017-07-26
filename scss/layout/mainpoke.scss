@@ -1,4 +1,5 @@
-.main-poke {
+.main-poke,
+.poke-btn-wrap {
 	@include flexbox();
 	@include flex-direction(#{column});
 	@include justify-content(#{center});
@@ -95,9 +96,21 @@
 }
 
 
-// Poke button
+// Poke button wrap
 
 .poke-btn-wrap {
-	border: 1px solid black;
-	@include margin(8em 0 0);
+	@include margin(3em 0 0);
+	@include pad(1em);
+	@media (min-width: $break-m) {
+		width: 60%;
+	}
+}
+
+.poke-btn {
+	height: 5em;
+	width: 5em;
+	@include transition(all .4s ease);
+	&:hover {
+		transform: scale(1.2);
+	}
 }

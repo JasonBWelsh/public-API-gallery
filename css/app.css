@@ -739,7 +739,8 @@ ul, ol {
 .reveal {
   opacity: 1; }
 
-.main-poke {
+.main-poke,
+.poke-btn-wrap {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -809,8 +810,22 @@ ul, ol {
   50% {
     transform: rotateY(-270deg) translate3d(200px, -10px, 10px); } }
 .poke-btn-wrap {
-  border: 1px solid black;
-  margin: 8em 0 0; }
+  margin: 3em 0 0;
+  padding: 1em; }
+  @media (min-width: 768px) {
+    .poke-btn-wrap {
+      width: 60%; } }
+
+.poke-btn {
+  height: 5em;
+  width: 5em;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .poke-btn:hover {
+    transform: scale(1.2); }
 
 .cardBox {
   padding: 1em;
